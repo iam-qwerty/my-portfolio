@@ -42,10 +42,10 @@ export default function HeroSection() {
           </Button>
           <div className="flex gap-4">
             {[
-              { icon: Github, link: "https://github.com/zeeblink" },
+              { icon: Github, link: "https://github.com/iam-qwerty" },
               { icon: Linkedin, link: "https://www.linkedin.com/in/emmanuel-oyegbile/" },
               { icon: Mail, link: `mailto:eabiodun45@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}` },
-              { icon: X, link: "https://x.com/lil__qwerty" }
+              { icon: X, link: "https://x.com/iam__qwerty" }
             ].map(({ icon: Icon, link }, index) => (
               <Link key={index} target="_blank" href={link}>
                 <Button variant="ghost" size="icon" className="rounded-full hover:text-yellow-400">
