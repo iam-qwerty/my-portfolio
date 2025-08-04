@@ -88,6 +88,12 @@ export const projects = [
     link: "https://cataleex.vercel.app/"
   },
   {
+    title: "The Emergence Porch",
+    description: "The official website of a non-profit organization.",  
+    src: "/images/TEP.png",
+    link: "https://tep-one.vercel.app/"
+  },
+  {
     title: "NFT Marketplace",
     description: "Frontend project of a seamless NFT Marketplace built with Next.js and shadcn UI",  
     src: "/images/nft.png",
