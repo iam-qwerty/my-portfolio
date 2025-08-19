@@ -77,7 +77,7 @@ export const projects = [
 
   {
     title: "Professional Portfolio Website",
-    description: "Professional portfolio website for an incredible client, showcasing her expertises, experience, projects, etc. (still under construstion)",  
+    description: "Professional portfolio website for an incredible client, showcasing her expertise, experience, projects, etc. (still under construction)",  
     src: "/images/opeyemi.png",
     link: "https://opeyemi-five.vercel.app/"
   },
