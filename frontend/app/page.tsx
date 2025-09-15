@@ -18,11 +18,11 @@ export default async function Portfolio() {
     <>
       <ScrollProgressBar />
       <HomeSection />
-      <AboutSection />
-      <ServicesSection />
-      <SkillsSection />
       <ProjectsSection />
       <ExperienceSection />
+      <ServicesSection />
+      <SkillsSection />
+      <AboutSection />
       <BlogSection posts={latestPosts} />
       <ContactSection />
     </>
