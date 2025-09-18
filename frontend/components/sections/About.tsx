@@ -13,9 +13,8 @@ const AboutSection = () => (
       <div>
         <h3 className="text-3xl font-bold mb-4">About Me</h3>
         <p className="mb-4">
-          Hi there, I&apos;m a frontend developer with a little over a year of hands-on experience building responsive, user-first websites with React, Next.js, and Tailwind. 
-          I studied Computer Science and passionate about software development and AI in general, but I fell in love with the frontend, something about bringing interfaces to life just clicks for me. 
-          I enjoy clean code, great UI, and yes, I judge websites that default to light mode. 
+          Hi there, I&apos;m a frontend developer with over a year of hands-on experience building responsive, user-first websites with React, Next.js, and Tailwind. 
+          I'm a Computer Science graduate and passionate about software development and AI in general. I enjoy clean code, great UI, and yes, I judge websites that default to light mode lol.
           I&apos;m always learning, always building, and always down to learn and work with others.
         </p>
         {/* <p className="mb-6">
