@@ -74,18 +74,17 @@ export const techStack = [
 ]
 
 export const projects = [
-
+  {
+    title: "RDAS SOFTECH",
+    description: "Landing Website for a software solution company developed with Next.js",
+    src: "/images/rdas.png",
+    link: "https://rdas.com.ng"
+  },
   {
     title: "Professional Portfolio Website",
     description: "Professional portfolio website for an incredible client, showcasing her expertise, experience, projects, etc. (still under construction)",  
     src: "/images/opeyemi.png",
     link: "https://opeyemi-five.vercel.app/"
-  },
-  {
-    title: "Cataleex",
-    description: "The official website of an experienced web3 marketing agency (still under construction).",  
-    src: "/images/Cataleex.png",
-    link: "https://cataleex.vercel.app/"
   },
   {
     title: "The Emergence Porch",
@@ -94,23 +93,22 @@ export const projects = [
     link: "https://tep-one.vercel.app/"
   },
   {
+    title: "Cataleex",
+    description: "The official website of an experienced web3 marketing agency (still under construction).",  
+    src: "/images/Cataleex.png",
+    link: "https://cataleex.vercel.app/"
+  },
+   {
+    title: "Dish Palette",
+    description: "Next.js Full-stack CRUD recipe blog, with authentication and authorization.",
+    src: "/images/dish-palette.png",
+    link: "https://dish-palette-fullstack.vercel.app"
+  },
+  {
     title: "NFT Marketplace",
     description: "Frontend project of a seamless NFT Marketplace built with Next.js and shadcn UI",  
     src: "/images/nft.png",
     link: "https://nft-marketplace-zeta-weld.vercel.app/"
-  },
-  {
-    
-    title: "PullVid App",
-    description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",  
-    src: "/images/pullvid.png",
-    link: "https://pullvid.vercel.app/"
-  },
-  {
-    title: "RDAS SOFTECH",
-    description: "Landing Website for a software solution company developed with Next.js",
-    src: "/images/rdas.png",
-    link: "https://rdas.com.ng"
   },
   {
     title: "Isalesbook",
@@ -119,16 +117,16 @@ export const projects = [
     link: "https://isalesbook.com"
   },
   {
+    title: "PullVid App",
+    description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",  
+    src: "/images/pullvid.png",
+    link: "https://pullvid.vercel.app/"
+  },
+  {
     title: "Moonex",
     description: "Landing page for a Web3 startup built with React",
     src: "/images/moonex.png",
     link: "https://moonex-gules.vercel.app/"
-  },
-  {
-    title: "Dish Palette",
-    description: "Next.js Full-stack CRUD recipe blog, with authentication and authorization.",
-    src: "/images/dish-palette.png",
-    link: "https://dish-palette-fullstack.vercel.app"
   },
 ]
 
