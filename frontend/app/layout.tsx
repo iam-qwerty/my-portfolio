@@ -4,6 +4,7 @@ import './globals.css'
 import { Navigation } from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import Script from 'next/script'
+
 // Font
 const montserrat = Montserrat({
   subsets: ['latin'],
