@@ -90,7 +90,7 @@ export const projects = [
     title: "The Emergence Porch",
     description: "The official website of a non-profit organization.",  
     src: "/images/TEP.png",
-    link: "https://tep-one.vercel.app/"
+    link: "https://theemergenceporch.org/"
   },
   {
     title: "Cataleex",
