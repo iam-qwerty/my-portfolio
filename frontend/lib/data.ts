@@ -65,7 +65,7 @@ export const techStack = [
     name: "Prisma",
     logo: "/logos/prisma.svg",
     class: ""
-  }, 
+  },
   {
     name: "PostgreSQL",
     logo: "/logos/postgresql.svg",
@@ -81,24 +81,30 @@ export const projects = [
     link: "https://rdas.com.ng"
   },
   {
+    title: "Which AI Tool",
+    description: "AI tool directory where users can find the best AI tools for specific tasks.",
+    src: "/images/which-ai.jpg",
+    link: "https://which-aitool.vercel.app/"
+  },
+  {
     title: "Professional Portfolio Website",
-    description: "Professional portfolio website for an incredible client, showcasing her expertise, experience, projects, etc. (still under construction)",  
+    description: "Professional portfolio website for an incredible client, showcasing her expertise, experience, projects, etc. (still under construction)",
     src: "/images/opeyemi.png",
     link: "https://opeyemi-five.vercel.app/"
   },
   {
     title: "The Emergence Porch",
-    description: "The official website of a non-profit organization.",  
+    description: "The official website of a non-profit organization.",
     src: "/images/TEP.png",
     link: "https://theemergenceporch.org/"
   },
   {
     title: "Cataleex",
-    description: "The official website of an experienced web3 marketing agency (still under construction).",  
+    description: "The official website of an experienced web3 marketing agency (still under construction).",
     src: "/images/Cataleex.png",
     link: "https://cataleex.vercel.app/"
   },
-   {
+  {
     title: "Dish Palette",
     description: "Next.js Full-stack CRUD recipe blog, with authentication and authorization.",
     src: "/images/dish-palette.png",
@@ -106,7 +112,7 @@ export const projects = [
   },
   {
     title: "NFT Marketplace",
-    description: "Frontend project of a seamless NFT Marketplace built with Next.js and shadcn UI",  
+    description: "Frontend project of a seamless NFT Marketplace built with Next.js and shadcn UI",
     src: "/images/nft.png",
     link: "https://nft-marketplace-zeta-weld.vercel.app/"
   },
@@ -118,7 +124,7 @@ export const projects = [
   },
   {
     title: "PullVid App",
-    description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",  
+    description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",
     src: "/images/pullvid.png",
     link: "https://pullvid.vercel.app/"
   },
