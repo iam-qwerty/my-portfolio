@@ -10,6 +10,12 @@ export async function submitContactForm(
     const email = formData.get("email")?.toString();
     const subject = formData.get("subject")?.toString();
     const message = formData.get("message")?.toString();
+    const faxNumber = formData.get('faxNumber')?.toString();
+
+    // reject bots spam
+    if (faxNumber) {
+      return { success: false, message: "Rejected" }
+    }
 
     if (!name || !email || !subject || !message) {
       return { message: "All fields are required", success: false };

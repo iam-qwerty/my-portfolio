@@ -41,6 +41,10 @@ const Contact = () => {
             <label htmlFor="subject" className="block mb-2">Subject</label>
             <Input id="subject" name="subject" className="bg-gray-800 border-gray-700" />
           </div>
+
+          {/* HoneyPot field to filter spam */}
+          <input type="text" name="faxNumber" className="absolute opacity-0 pointer-events-none" />
+
           <div>
             <label htmlFor="message" className="block mb-2">Message</label>
             <Textarea id="message" name="message" className="bg-gray-800 border-gray-700" rows={6} />
@@ -50,8 +54,8 @@ const Contact = () => {
               {state.message}
             </div>
           )}
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-yellow-400 text-black hover:bg-yellow-500"
           >
             {pending ? 'Sending...' : 'Send Message'}
