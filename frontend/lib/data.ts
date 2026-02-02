@@ -75,6 +75,12 @@ export const techStack = [
 
 export const projects = [
   {
+    title: "Cyberdicts",
+    description: "Gamified Cybersecurity Certification Prep",
+    src: "/images/cyberdicts.jpeg",
+    link: "https://cyberdicts.vercel.app/"
+  },
+  {
     title: "RDAS SOFTECH",
     description: "Landing Website for a software solution company developed with Next.js",
     src: "/images/rdas.png",
