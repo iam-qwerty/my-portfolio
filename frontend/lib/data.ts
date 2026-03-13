@@ -75,22 +75,28 @@ export const techStack = [
 
 export const projects = [
   {
+    title: "ICC Studios",
+    description: "Sleek and Professional Photography Website",
+    src: "/images/icc.jpeg",
+    link: "https://icc-delta.vercel.app/"
+  },
+  {
     title: "Cyberdicts",
     description: "Gamified Cybersecurity Certification Prep",
     src: "/images/cyberdicts.jpeg",
     link: "https://cyberdicts.vercel.app/"
   },
   {
-    title: "RDAS SOFTECH",
-    description: "Landing Website for a software solution company developed with Next.js",
-    src: "/images/rdas.png",
-    link: "https://rdas.com.ng"
-  },
-  {
     title: "Which AI Tool",
     description: "AI tool directory where users can find the best AI tools for specific tasks.",
     src: "/images/which-ai.jpg",
     link: "https://which-aitool.vercel.app/"
+  },
+  {
+    title: "RDAS SOFTECH",
+    description: "Landing Website for a software solution company developed with Next.js",
+    src: "/images/rdas.png",
+    link: "https://rdas.com.ng"
   },
   {
     title: "Professional Portfolio Website",
