@@ -14,33 +14,66 @@ const montserrat = Montserrat({
 
 //  Generate metadata for the entire site
 export const metadata: Metadata = {
-  metadataBase: new URL('https://emmanueloye.xyz'),
-  keywords: [
-    "Frontend Developer",
-    "Next.js Developer",
-    "Web Developer",
-    "React Developer Portfolio",
-    "Next.js Developer Portfolio",
-    "Frontend Developer Portfolio",
-    "Hire Freelance Next.js Developer",
-    "SEO Optimized Next.js Landing Pages",
-    "Figma-to-Code developer",
-    "Next.js & Tailwind CSS Developer",
-    "Modern Responsive Web Apps Portfolio",
-    "Emmanuel Oye",
-  ],
+  metadataBase: new URL('https://emmanueloye.com'),
   title: {
-    default: 'Emmanuel Oye | Next.js & Frontend Developer',
+    default: 'Emmanuel Oye | Web Developer & Software Engineer',
     template: '%s | Emmanuel Oye',
   },
-  description: 'Frontend Developer specializing in Next.js, React, and Tailwind. I build modern, fast and SEO-friendly web apps and landing pages. Check out my work!',
+  description: 'Full-stack Web Developer specializing in Next.js, React, Node.js, and modern web technologies. I build high-performance, accessible, and SEO-optimized web applications.',
+  keywords: [
+    "Web Developer",
+    "Software Engineer",
+    "Full-stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "TypeScript Expert",
+    "Node.js Developer",
+    "Portfolio Developer Nigerians",
+    "Modern Web Applications",
+    "Performance Optimization",
+    "Emmanuel Oye",
+    "Hire Web Developer Nigeria",
+  ],
+  authors: [{ name: 'Emmanuel Oye' }],
+  creator: 'Emmanuel Oye',
+  publisher: 'Emmanuel Oye',
   alternates: {
-    canonical: 'https://emmanueloye.xyz',
+    canonical: 'https://emmanueloye.com',
   },
   openGraph: {
-    description: 'Frontend Developer specializing in Next.js, React, and Tailwind. I build modern, fast and SEO-friendly web apps and landing pages. Check out my work!',
-    images: ['']
-  }
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://emmanueloye.com',
+    siteName: 'Emmanuel Oye Portfolio',
+    title: 'Emmanuel Oye | Web Developer & Software Engineer',
+    description: 'Expert Web Developer building modern, performant, and user-centric digital experiences with Next.js and React.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Emmanuel Oye - Web Developer Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Emmanuel Oye | Web Developer & Software Engineer',
+    description: 'Expert Web Developer building modern, performant, and user-centric digital experiences with Next.js and React.',
+    creator: '@emmanuel_oye',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function RootLayout({
@@ -65,6 +98,23 @@ export default function RootLayout({
               page_path: window.location.pathname,
             });
           `}
+        </Script>
+        {/* Structured Data (JSON-LD) */}
+        <Script id="json-ld" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Emmanuel Oye",
+            "url": "https://emmanueloye.com",
+            "jobTitle": "Web Developer & Software Engineer",
+            "knowsAbout": ["Web Development", "Next.js", "React", "Node.js", "TypeScript", "UI/UX Design"],
+            "sameAs": [
+              "https://github.com/iam-qwerty",
+              "https://twitter.com/iam__qwerty",
+              "https://www.linkedin.com/in/emmanuel-oyegbile/"
+            ],
+            "description": "Expert Web Developer specializing in Next.js, React, and modern web technologies. I build high-performance, accessible, and SEO-optimized web applications."
+          })}
         </Script>
       </head>
       <body className={`${montserrat.className} bg-[#0a0a0a] text-white min-h-screen overflow-x-hidden`}>

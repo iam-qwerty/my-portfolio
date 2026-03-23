@@ -7,8 +7,8 @@ interface Post {
   _createdAt: string | Date;
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap>{
-  const baseUrl = 'https://emmanueloye.xyz';
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const baseUrl = 'https://emmanueloye.com';
 
   try {
     // Optimized query - only fetch what we need

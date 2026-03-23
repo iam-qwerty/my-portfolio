@@ -16,7 +16,7 @@ interface Params {
 }
 
 // Helper function to safely get text for description
-function getPlainText(blocks:PortableTextBlock[] = []) {
+function getPlainText(blocks: PortableTextBlock[] = []) {
     return blocks
         // loop through each block
         .map(block => {
@@ -54,28 +54,30 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
     // Generate metadata for the blog post
     return {
-        title: post.title, // Use the post's title for SEO
-        description: description, // Use the generated description for SEO
+        title: post.title,
+        description: description,
+        keywords: [post.title, "Web Development", "Software Engineering", ...(post.categories || [])],
+        authors: post.authorName ? [{ name: post.authorName }] : [{ name: 'Emmanuel Oye' }],
         alternates: {
-            canonical: `https://emmanueloye.xyz/blog/${post.slug.current}`, // Add the canonical URL
+            canonical: `https://emmanueloye.com/blog/${post.slug.current}`,
         },
-        openGraph: { 
+        openGraph: {
             title: post.title,
             description: description,
             type: 'article',
             publishedTime: post._createdAt,
-            authors: post.authorName ? [post.authorName] : [],
-            url: `https://emmanueloye.xyz/blog/${post.slug.current}`, // Add the canonical URL
+            authors: post.authorName ? [post.authorName] : ['Emmanuel Oye'],
+            url: `https://emmanueloye.com/blog/${post.slug.current}`,
             images: post.mainImage ? [
                 {
-                    url: urlFor(post.mainImage).width(1200).height(630).fit('crop').url(), // Use fit('crop') for better OG image aspect ratio
+                    url: urlFor(post.mainImage).width(1200).height(630).fit('crop').url(),
                     width: 1200,
                     height: 630,
                     alt: post.title,
                 },
-            ] : [], // Add image if it exists
+            ] : [],
+            siteName: 'Emmanuel Oye Portfolio',
         },
-        // Example for Twitter Card (optional)
         twitter: {
             card: 'summary_large_image',
             title: post.title,
@@ -95,7 +97,7 @@ export default async function BlogPost({ params }: Params) {
     // Use Next.js's new notFound() helper to gracefully handle missing data
     if (!post) return notFound();
 
-    const shareURL = `https://emmanueloye.xyz/blog/${post.slug.current}`;
+    const shareURL = `https://emmanueloye.com/blog/${post.slug.current}`;
     return (
         <article className="max-w-3xl mx-auto py-16 px-1">
             <div className="mb-8">
@@ -123,7 +125,7 @@ export default async function BlogPost({ params }: Params) {
                 {post.body && <PortableText value={post.body} components={components} />}
             </div>
             <div className='flex justify-center lg:justify-end mt-20'>
-                <ShareButton url={shareURL} title={post.title}/> {/* Share button for social media */}
+                <ShareButton url={shareURL} title={post.title} /> {/* Share button for social media */}
             </div>
         </article>
     );
