@@ -13,13 +13,11 @@ const AboutSection = () => (
       <div>
         <h3 className="text-3xl font-bold mb-4">About Me</h3>
         <p className="mb-4">
-          Hi there, I&apos;m a Web Developer and Software Engineer with 2 years of hands-on experience building modern, scalable, and high-performance web applications with React, Next.js, and Node.js.
-          I&apos;m a Computer Science graduate passionate about architecting clean solutions and exploring the intersection of AI and web technologies.
-          I focus on clean code, exceptional UI, and delivering seamless user experiences that drive real value.
+          Hi there, I&apos;m a web developer with 2+ years of experience delivering production web apps and client sites.
+          I have a proven track record of shipping projects end-to-end using Next.js, TypeScript, and Supabase.
+          I studied Computer Science and graduated with a Second Class Upper degree, and I'm passionate about software development and system design.
+          I&apos;m comfortable with both client-facing freelance work and collaborative team environments, and I&apos;m always learning and building.
         </p>
-        {/* <p className="mb-6">
-          My journey in tech is driven by curiosity and a desire to solve real-world problems through innovative solutions.
-        </p> */}
         <Link href="https://docs.google.com/document/d/1h45-3YuoFLNPnmlLrwINJvo2f0pTGFG9LjQavWsqFBU/export?format=pdf">
           <Button className="bg-yellow-400 text-black hover:bg-yellow-500">
             <Download className="mr-2 h-4 w-4" /> Download Resume

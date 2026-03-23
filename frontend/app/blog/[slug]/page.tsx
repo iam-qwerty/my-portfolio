@@ -54,30 +54,28 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
     // Generate metadata for the blog post
     return {
-        title: post.title,
-        description: description,
-        keywords: [post.title, "Web Development", "Software Engineering", ...(post.categories || [])],
-        authors: post.authorName ? [{ name: post.authorName }] : [{ name: 'Emmanuel Oye' }],
+        title: post.title, // Use the post's title for SEO
+        description: description, // Use the generated description for SEO
         alternates: {
-            canonical: `https://emmanueloye.com/blog/${post.slug.current}`,
+            canonical: `https://emmanueloye.com/blog/${post.slug.current}`, // Add the canonical URL
         },
         openGraph: {
             title: post.title,
             description: description,
             type: 'article',
             publishedTime: post._createdAt,
-            authors: post.authorName ? [post.authorName] : ['Emmanuel Oye'],
-            url: `https://emmanueloye.com/blog/${post.slug.current}`,
+            authors: post.authorName ? [post.authorName] : [],
+            url: `https://emmanueloye.com/blog/${post.slug.current}`, // Add the canonical URL
             images: post.mainImage ? [
                 {
-                    url: urlFor(post.mainImage).width(1200).height(630).fit('crop').url(),
+                    url: urlFor(post.mainImage).width(1200).height(630).fit('crop').url(), // Use fit('crop') for better OG image aspect ratio
                     width: 1200,
                     height: 630,
                     alt: post.title,
                 },
-            ] : [],
-            siteName: 'Emmanuel Oye Portfolio',
+            ] : [], // Add image if it exists
         },
+        // Example for Twitter Card (optional)
         twitter: {
             card: 'summary_large_image',
             title: post.title,

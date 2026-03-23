@@ -28,8 +28,8 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-base md:text-xl mb-8 leading-relaxed"
         >
-          Your friendly neighborhood Web developer. <br />
-          I build Beautiful, Sleek, and Modern Websites.
+          Frontend & Full-Stack Web Developer. <br />
+          I build Beautiful, Sleek, and Modern Websites and Web Apps.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
