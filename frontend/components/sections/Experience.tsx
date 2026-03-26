@@ -9,7 +9,9 @@ const ExperienceSection = () => (
   <Section id="experience">
     <div className="relative max-w-3xl mx-auto px-1 md:px-12 lg:px-16">
       <FloatingTriangle className="text-yellow-400 right-0 top-0" />
-      <h3 className="text-3xl font-bold mb-8 text-center">Work Experience</h3>
+      <h3 className="text-3xl font-bold mb-12 text-center">Work
+        <span className="text-yellow-400"> Experience</span>
+      </h3>
       <div className="space-y-8">
         {experience.map((exp, i) => (
           <motion.div
