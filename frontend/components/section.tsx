@@ -11,8 +11,8 @@ type SectionProps = {
 
 export default function Section({ children, id, className = "" }: SectionProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
-  
+  const isInView = useInView(ref, { once: true, amount: "some" })
+
   return (
     <motion.section
       id={id}

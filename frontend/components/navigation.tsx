@@ -146,7 +146,7 @@ export const Navigation = () => {
                 transition={{ delay: 0.8 }}
               >
                 <p className="text-gray-400 text-sm">
-                  &copy; 2023 Emmanuel Oye. All rights reserved.
+                  &copy; 2024 Emmanuel Oye. All rights reserved.
                 </p>
               </motion.div>
             </motion.div>

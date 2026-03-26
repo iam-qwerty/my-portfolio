@@ -45,12 +45,11 @@ const ProjectCard = ({ project, index, getTypeIcon }: { project: Project; index:
         />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
 
-        {/* Floating Type Badge (Show first type) */}
+        {/* Floating Type Badge */}
         <div className="absolute top-4 left-4">
           <Badge variant="secondary" className="bg-zinc-950/80 backdrop-blur-md border-zinc-700 text-[10px] md:text-xs py-1 px-2.5 flex items-center shadow-lg">
-            {getTypeIcon(project.types[0])}
-            {project.types[0]}
-            {project.types.length > 1 && <span className="ml-1 text-zinc-500">+{project.types.length - 1}</span>}
+            {getTypeIcon(project.type)}
+            {project.type}
           </Badge>
         </div>
 
@@ -128,13 +127,11 @@ const ProjectCard = ({ project, index, getTypeIcon }: { project: Project; index:
               <ScrollArea className="md:w-[55%] h-[80vh] md:h-auto max-h-[85vh]">
                 <div className="p-8 md:p-10 space-y-8">
                   <DialogHeader>
-                    <div className="flex flex-wrap items-center gap-2 mb-4">
-                      {project.types.map((type) => (
-                        <Badge key={type} variant="outline" className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5 px-3 py-1 text-[11px] uppercase tracking-wider">
-                          {getTypeIcon(type)}
-                          {type}
-                        </Badge>
-                      ))}
+                    <div className="flex items-center gap-2 mb-4">
+                      <Badge variant="outline" className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5 px-3 py-1 text-[11px] uppercase tracking-wider">
+                        {getTypeIcon(project.type)}
+                        {project.type}
+                      </Badge>
                     </div>
                     <DialogTitle className="text-3xl md:text-4xl font-black">{project.title}</DialogTitle>
                   </DialogHeader>
@@ -197,13 +194,11 @@ const ProjectCard = ({ project, index, getTypeIcon }: { project: Project; index:
           <DrawerContent className="bg-zinc-950 border-zinc-800 text-white max-h-[92vh]">
             <ScrollArea className="overflow-y-auto px-6 pt-2 pb-8">
               <DrawerHeader className="px-0 text-left">
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  {project.types.map((type) => (
-                    <Badge key={type} variant="outline" className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5 px-2 py-0.5 text-[10px] items-center flex">
-                      {getTypeIcon(type)}
-                      {type}
-                    </Badge>
-                  ))}
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="outline" className="text-yellow-400 border-yellow-400/30 bg-yellow-400/5 px-2 py-0.5 text-[10px] items-center flex">
+                    {getTypeIcon(project.type)}
+                    {project.type}
+                  </Badge>
                 </div>
                 <DrawerTitle className="text-2xl font-bold">{project.title}</DrawerTitle>
                 <DrawerDescription className="text-zinc-400 pt-2 leading-relaxed">
@@ -257,7 +252,7 @@ const ProjectsSection = () => {
   const [filter, setFilter] = useState<ProjectType | "All">("All");
 
   const filteredProjects = projects.filter(
-    (project) => filter === "All" || project.types.includes(filter)
+    (project) => filter === "All" || project.type === filter
   );
 
   const getTypeIcon = (type: ProjectType) => {
