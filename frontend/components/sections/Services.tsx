@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import FloatingTriangle from "../animated/FloatingTriangle";
-import Section from "../Section";
+import FloatingTriangle from "../animated/floating-traingle";
+import Section from "../section";
 import { services } from "@/lib/data";
 
 const ServicesSection = () => (

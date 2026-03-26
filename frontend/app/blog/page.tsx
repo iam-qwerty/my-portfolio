@@ -1,7 +1,7 @@
 import { client } from "@/sanity-lib/client";
 import { blogQuery } from "@/sanity-lib/queries";
-import { BlogList } from "@/components/sections/BlogList";
-import Section from "@/components/Section";
+import { BlogList } from "@/components/sections/blogList";
+import Section from "@/components/section";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

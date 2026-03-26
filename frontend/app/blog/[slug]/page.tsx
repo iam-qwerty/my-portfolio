@@ -7,7 +7,8 @@ import { components } from "@/lib/portableText";
 import { notFound } from "next/navigation";
 import { Post } from '@/lib/types'; // Assuming you have a Post type defined
 import { PortableTextBlock } from '@portabletext/types';
-import ShareButton from '@/components/blog/share-button';
+import ShareButton from '@/app/blog/components/share-button';
+import ScrollProgressBar from '@/components/animated/scroll-progress-bar';
 
 interface Params {
     params: Promise<{
@@ -97,35 +98,38 @@ export default async function BlogPost({ params }: Params) {
 
     const shareURL = `https://emmanueloye.com/blog/${post.slug.current}`;
     return (
-        <article className="max-w-3xl mx-auto py-16 px-1">
-            <div className="mb-8">
-                <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-                <div className="flex gap-4 text-gray-400">
-                    {post._createdAt && <span>{new Date(post._createdAt).toLocaleDateString()}</span>}
-                    {post.authorName && <span>by {post.authorName}</span>}
+        <>
+            <ScrollProgressBar />
+            <article className="max-w-3xl mx-auto py-16 px-1">
+                <div className="mb-8">
+                    <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+                    <div className="flex gap-4 text-gray-400">
+                        {post._createdAt && <span>{new Date(post._createdAt).toLocaleDateString()}</span>}
+                        {post.authorName && <span>by {post.authorName}</span>}
+                    </div>
                 </div>
-            </div>
 
-            {post.mainImage ? (
-                <div className="relative w-full h-96 mb-8"> {/* Added container for better image handling */}
-                    <Image
-                        src={urlFor(post.mainImage).url()}
-                        alt={post.title}
-                        fill // Use fill for responsive image sizing within container
-                        style={{ objectFit: 'cover' }} // Ensure image covers the area
-                        className="rounded-lg"
-                        priority // Prioritize loading the main image
-                    />
+                {post.mainImage ? (
+                    <div className="relative w-full h-96 mb-8"> {/* Added container for better image handling */}
+                        <Image
+                            src={urlFor(post.mainImage).url()}
+                            alt={post.title}
+                            fill // Use fill for responsive image sizing within container
+                            style={{ objectFit: 'cover' }} // Ensure image covers the area
+                            className="rounded-lg"
+                            priority // Prioritize loading the main image
+                        />
+                    </div>
+                ) : null}
+
+                <div className="prose prose-lg prose-invert max-w-none"> {/* Increased prose size */}
+                    {post.body && <PortableText value={post.body} components={components} />}
                 </div>
-            ) : null}
-
-            <div className="prose prose-lg prose-invert max-w-none"> {/* Increased prose size */}
-                {post.body && <PortableText value={post.body} components={components} />}
-            </div>
-            <div className='flex justify-center lg:justify-end mt-20'>
-                <ShareButton url={shareURL} title={post.title} /> {/* Share button for social media */}
-            </div>
-        </article>
+                <div className='flex justify-center lg:justify-end mt-20'>
+                    <ShareButton url={shareURL} title={post.title} /> {/* Share button for social media */}
+                </div>
+            </article>
+        </>
     );
 }
 

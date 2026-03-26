@@ -73,80 +73,131 @@ export const techStack = [
     },
 ]
 
-export const projects = [
+export type ProjectType = "Landing Page" | "Web App" | "Fullstack";
+
+export interface Project {
+    title: string;
+    description: string;
+    src: string;
+    link: string;
+    type: ProjectType;
+    tags: string[];
+    features: string[];
+    github?: string;
+}
+
+export const projects: Project[] = [
     {
         title: "ICC Studios",
         description: "Sleek and Professional Photography Website",
         src: "/images/icc.jpeg",
-        link: "https://icc-delta.vercel.app/"
+        link: "https://icc-delta.vercel.app/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+        features: ["Photography portfolio", "Gallery layout", "Custom animations"]
     },
     {
         title: "Cyberdicts",
         description: "Gamified Cybersecurity Certification Prep",
         src: "/images/cyberdicts.jpeg",
-        link: "https://cyberdicts.vercel.app/"
+        link: "https://cyberdicts.vercel.app/",
+        type: "Fullstack" as ProjectType,
+        tags: ["Next.js", "TypeScript", "Zustand"],
+        features: ["Interactive quizzes", "Progress tracking", "Certification simulation"]
     },
     {
         title: "Which AI Tool",
         description: "AI tool directory where users can find the best AI tools for specific tasks.",
         src: "/images/which-ai.jpg",
-        link: "https://which-aitool.vercel.app/"
+        link: "https://askwhichai.com/",
+        type: "Web App" as ProjectType,
+        tags: ["Next.js", "OpenAI", "Semantic Search"],
+        features: ["Global search", "Category filtering", "Rich tool metadata"]
     },
     {
         title: "RDAS SOFTECH",
         description: "Landing Website for a software solution company developed with Next.js",
         src: "/images/rdas.png",
-        link: "https://rdas.com.ng"
+        link: "https://rdas.com.ng",
+        type: "Landing Page" as ProjectType,
+        tags: ["Next.js", "Business", "Optimization"],
+        features: ["Service showcases", "Client testimonials", "Contact form integration"]
     },
     {
         title: "Professional Portfolio Website",
         description: "Custom-designed portfolio site showcasing client experiences and impact.",
         src: "/images/opeyemi.png",
-        link: "https://opeyemi-five.vercel.app/"
+        link: "https://opeyemi-five.vercel.app/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Next.js", "Design", "Framer Motion"],
+        features: ["Custom animations", "Project showcases", "Responsive design"]
     },
     {
         title: "The Emergence Porch",
         description: "The official website of a non-profit organization helping young individuals find purpose.",
         src: "/images/TEP.png",
-        link: "https://theemergenceporch.org/"
+        link: "https://theemergenceporch.org/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Next.js", "SEO", "Accessibility"],
+        features: ["Custom design", "Donation integration", "SEO & metadata optimization"]
     },
     {
         title: "Cataleex",
         description: "Web3 marketing agency site with a unique, modern design aesthetic.",
         src: "/images/Cataleex.png",
-        link: "https://cataleex.vercel.app/"
+        link: "https://cataleex.vercel.app/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Web3", "Modern UI", "Next.js"],
+        features: ["Immersive UI", "Service breakdowns", "Web3 aesthetic"]
     },
     {
         title: "Dish Palette",
         description: "Full-stack recipe app with user authentication, image uploads, and a relational PostgreSQL database.",
         src: "/images/dish-palette.png",
-        link: "https://dish-palette-fullstack.vercel.app"
+        link: "https://dish-palette-fullstack.vercel.app",
+        type: "Fullstack" as ProjectType,
+        tags: ["Next.js", "PostgreSQL", "Prisma", "Clerk Auth"],
+        features: ["User authentication", "Image uploads", "CRUD operations"],
+        github: "https://github.com/iam-qwerty/dish-palette"
     },
     {
         title: "NFT Marketplace",
         description: "Pixel-perfect Figma-to-code implementation with full responsiveness and smooth animations.",
         src: "/images/nft.png",
-        link: "https://nft-marketplace-zeta-weld.vercel.app/"
+        link: "https://nft-marketplace-zeta-weld.vercel.app/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Figma to Code", "Animation", "Responsive"],
+        features: ["Pixel-perfect implementation", "Responsive layout", "Interactive UI components"],
+        github: "https://github.com/iam-qwerty/nft-marketplace"
     },
     {
         title: "Isalesbook",
         description: "SEO-optimized landing page for a sales inventory SaaS app.",
         src: "/images/isalesbook.png",
-        link: "https://isalesbook.com"
+        link: "https://isalesbook.com",
+        type: "Landing Page" as ProjectType,
+        tags: ["SEO", "Landing Page"],
+        features: ["SaaS landing architecture", "Performance optimization", "SEO ranking focus"]
     },
     {
         title: "PullVid App",
         description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",
         src: "/images/pullvid.png",
-        link: "https://pullvid.vercel.app/"
+        link: "https://pullvid.vercel.app/",
+        type: "Web App" as ProjectType,
+        tags: ["Video API", "Next.js", "Utility"],
+        features: ["Multi-platform support", "High-speed downloads", "Simple & intuitive UI"]
     },
     {
         title: "Moonex",
         description: "Pixel-perfect Figma-to-code Web3 landing page implementation.",
         src: "/images/moonex.png",
-        link: "https://moonex-gules.vercel.app/"
+        link: "https://moonex-gules.vercel.app/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Web3", "Next.js", "Pixel Perfect"],
+        features: ["Next.js performance", "Modern UI implementation", "Web3 design system"]
     },
-]
+];
 
 export const experience = [
     {

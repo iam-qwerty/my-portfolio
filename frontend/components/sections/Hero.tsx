@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Github, Linkedin, Mail, X } from 'lucide-react'
 import Link from 'next/link'
-import Section from '../Section'
+import Section from '../section'
 import { ChevronDown } from 'lucide-react'
 
 export default function HeroSection() {

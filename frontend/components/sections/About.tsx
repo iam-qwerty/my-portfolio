@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import Section from "../Section";
-import FloatingShape from "../animated/FloatingShapes";
+import Section from "../section";
+import FloatingShape from "../animated/floating-shapes";
 import { Download } from "lucide-react";
 
 const AboutSection = () => (
@@ -15,7 +15,7 @@ const AboutSection = () => (
         <p className="mb-4">
           Hi there, I&apos;m a web developer with 2+ years of experience delivering production web apps and client sites.
           I have a proven track record of shipping projects end-to-end using Next.js, TypeScript, and Supabase.
-          I studied Computer Science and graduated with a Second Class Upper degree, and I'm passionate about software development and system design.
+          I studied Computer Science and graduated with a Second Class Upper degree, and I&apos;m passionate about software development and system design.
           I&apos;m comfortable with both client-facing freelance work and collaborative team environments, and I&apos;m always learning and building.
         </p>
         <Link href="https://docs.google.com/document/d/1h45-3YuoFLNPnmlLrwINJvo2f0pTGFG9LjQavWsqFBU/export?format=pdf">
@@ -32,6 +32,7 @@ const AboutSection = () => (
           objectFit="contain"
           className="rounded-lg"
           priority
+          style={{ background: 'radial-gradient(circle at center, rgba(255,200,0,0.15), transparent)' }}
         />
       </div>
     </div>

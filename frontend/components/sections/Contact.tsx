@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import Section from "../Section";
+import Section from "../section";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import FloatingShape from "../animated/FloatingShapes";
-import FloatingTriangle from "../animated/FloatingTriangle";
+import FloatingShape from "../animated/floating-shapes";
+import FloatingTriangle from "../animated/floating-traingle";
 import { submitContactForm } from "@/app/actions";
 
 // using these two cos by default, you can't return something from server actions
