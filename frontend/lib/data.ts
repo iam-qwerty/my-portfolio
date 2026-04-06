@@ -102,12 +102,21 @@ export const projects: Project[] = [
         features: ["Photography portfolio", "Gallery layout", "Custom animations"]
     },
     {
+        title: "Risk and Audit Insights",
+        description: "Expert analysis and actionable strategies for risk management, compliance, and audit professionals.",
+        src: "/images/R&A.jpeg",
+        link: "https://bidex-xi.vercel.app/",
+        type: "Fullstack" as ProjectType,
+        tags: ["Next.js", "Sanity CMS", "Tailwind CSS", "Shadcn UI"],
+        features: ["Blog", "Sanity CMS", "Responsive Design"]
+    },
+    {
         title: "Cyberdicts",
         description: "Gamified Cybersecurity Certification Prep",
         src: "/images/cyberdicts.jpeg",
         link: "https://cyberdicts.vercel.app/",
         type: "Fullstack" as ProjectType,
-        tags: ["Next.js", "TypeScript", "Zustand"],
+        tags: ["Next.js", "TypeScript", "Shadcn UI"],
         features: ["Interactive quizzes", "Progress tracking", "Certification simulation"]
     },
     {
@@ -119,15 +128,15 @@ export const projects: Project[] = [
         tags: ["Next.js", "OpenAI", "Semantic Search"],
         features: ["Global search", "Category filtering", "Rich tool metadata"]
     },
-    {
-        title: "RDAS SOFTECH",
-        description: "Landing Website for a software solution company developed with Next.js",
-        src: "/images/rdas.png",
-        link: "https://rdas.com.ng",
-        type: "Landing Page" as ProjectType,
-        tags: ["Next.js", "Business", "Optimization"],
-        features: ["Service showcases", "Client testimonials", "Contact form integration"]
-    },
+    // {
+    //     title: "RDAS SOFTECH",
+    //     description: "Landing Website for a software solution company developed with Next.js",
+    //     src: "/images/rdas.png",
+    //     link: "https://rdas.com.ng",
+    //     type: "Landing Page" as ProjectType,
+    //     tags: ["Next.js", "Business", "Optimization"],
+    //     features: ["Service showcases", "Client testimonials", "Contact form integration"]
+    // },
     {
         title: "Professional Portfolio Website",
         description: "Custom-designed portfolio site showcasing client experiences and impact.",
