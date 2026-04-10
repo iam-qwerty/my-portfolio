@@ -7,12 +7,12 @@ const ExperienceSection = dynamic(() => import('@/components/sections/experience
 const ProjectsSection = dynamic(() => import('@/components/sections/projects'))
 const ContactSection = dynamic(() => import('@/components/sections/contact'))
 const ScrollProgressBar = dynamic(() => import('@/components/animated/scroll-progress-bar'))
-import { client } from '@/sanity-lib/client'
+import { sanityFetch } from '@/sanity-lib/live'
 import { latestPostsQuery } from '@/sanity-lib/queries'
 import { BlogSection } from '@/components/sections/blogSection'
 
 export default async function Portfolio() {
-  const latestPosts = await client.fetch(latestPostsQuery)
+  const { data: latestPosts } = await sanityFetch({ query: latestPostsQuery })
 
   return (
     <>

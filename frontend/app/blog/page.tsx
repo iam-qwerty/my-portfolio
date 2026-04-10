@@ -1,4 +1,4 @@
-import { client } from "@/sanity-lib/client";
+import { sanityFetch } from "@/sanity-lib/live";
 import { blogQuery } from "@/sanity-lib/queries";
 import { BlogList } from "@/components/sections/blogList";
 import Section from "@/components/section";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  const posts = await client.fetch(blogQuery);
+  const { data: posts } = await sanityFetch({ query: blogQuery });
 
   return (
     <Section id="blog" className="min-h-screen">

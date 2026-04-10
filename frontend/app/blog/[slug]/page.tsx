@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { client, urlFor } from "@/sanity-lib/client"; // Combined imports
+import { sanityFetch } from "@/sanity-lib/live";
 import { postQuery } from "@/sanity-lib/queries";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
@@ -38,7 +39,7 @@ function getPlainText(blocks: PortableTextBlock[] = []) {
 // Generate dynamic metadata
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
     const { slug } = await params;
-    const post: Post = await client.fetch(postQuery, { slug });
+    const { data: post } = await sanityFetch({ query: postQuery, params: { slug } });
 
     if (!post) {
         // Return metadata for not found page
@@ -91,7 +92,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function BlogPost({ params }: Params) {
     const { slug } = await params; // Access slug directly from params
     // Fetch the post data using our Sanity client
-    const post: Post = await client.fetch(postQuery, { slug });
+    const { data: post } = await sanityFetch({ query: postQuery, params: { slug } });
 
     // Use Next.js's new notFound() helper to gracefully handle missing data
     if (!post) return notFound();

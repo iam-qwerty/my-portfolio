@@ -4,6 +4,7 @@ import './globals.css'
 import { Navigation } from '@/components/navigation'
 import Footer from '@/components/footer'
 import Script from 'next/script'
+import { SanityLive } from "@/sanity-lib/live"
 
 // Font
 const montserrat = Montserrat({
@@ -74,6 +75,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <SanityLive />
       </body>
     </html>
   )
