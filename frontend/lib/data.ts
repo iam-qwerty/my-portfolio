@@ -164,16 +164,16 @@ export const projects: Project[] = [
         tags: ["Web3", "Modern UI", "Next.js"],
         features: ["Immersive UI", "Service breakdowns", "Web3 aesthetic"]
     },
-    {
-        title: "Dish Palette",
-        description: "Full-stack recipe app with user authentication, image uploads, and a relational PostgreSQL database.",
-        src: "/images/dish-palette.png",
-        link: "https://dish-palette-fullstack.vercel.app",
-        type: "Fullstack" as ProjectType,
-        tags: ["Next.js", "PostgreSQL", "Prisma", "Clerk Auth"],
-        features: ["User authentication", "Image uploads", "CRUD operations"],
-        github: "https://github.com/iam-qwerty/dish-palette"
-    },
+    // {
+    //     title: "Dish Palette",
+    //     description: "Full-stack recipe app with user authentication, image uploads, and a relational PostgreSQL database.",
+    //     src: "/images/dish-palette.png",
+    //     link: "https://dish-palette-fullstack.vercel.app",
+    //     type: "Fullstack" as ProjectType,
+    //     tags: ["Next.js", "PostgreSQL", "Prisma", "Clerk Auth"],
+    //     features: ["User authentication", "Image uploads", "CRUD operations"],
+    //     github: "https://github.com/iam-qwerty/dish-palette"
+    // },
     {
         title: "NFT Marketplace",
         description: "Pixel-perfect Figma-to-code implementation with full responsiveness and smooth animations.",
@@ -181,7 +181,7 @@ export const projects: Project[] = [
         link: "https://nft-marketplace-zeta-weld.vercel.app/",
         type: "Landing Page" as ProjectType,
         tags: ["Figma to Code", "Animation", "Responsive"],
-        features: ["Pixel-perfect implementation", "Responsive layout", "Interactive UI components"],
+        features: ["Pixel-perfect implementation", "Figma to code", "Responsive layout"],
         github: "https://github.com/iam-qwerty/nft-marketplace"
     },
     {
@@ -193,23 +193,24 @@ export const projects: Project[] = [
         tags: ["SEO", "Landing Page"],
         features: ["SaaS landing architecture", "Performance optimization", "SEO ranking focus"]
     },
-    {
-        title: "PullVid App",
-        description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",
-        src: "/images/pullvid.png",
-        link: "https://pullvid.vercel.app/",
-        type: "Web App" as ProjectType,
-        tags: ["Video API", "Next.js", "Utility"],
-        features: ["Multi-platform support", "High-speed downloads", "Simple & intuitive UI"]
-    },
+    // {
+    //     title: "PullVid App",
+    //     description: "PullVid is a video downloader app that allows users to download videos from various platforms like YouTube, Twitter, Facebook, Instagram, and TikTok.",
+    //     src: "/images/pullvid.png",
+    //     link: "https://pullvid.vercel.app/",
+    //     type: "Web App" as ProjectType,
+    //     tags: ["Video API", "Next.js", "Utility"],
+    //     features: ["Multi-platform support", "High-speed downloads", "Simple & intuitive UI"]
+    // },
     {
         title: "Moonex",
         description: "Pixel-perfect Figma-to-code Web3 landing page implementation.",
         src: "/images/moonex.png",
         link: "https://moonex-gules.vercel.app/",
         type: "Landing Page" as ProjectType,
-        tags: ["Web3", "Next.js", "Pixel Perfect"],
-        features: ["Next.js performance", "Modern UI implementation", "Web3 design system"]
+        tags: ["Figma to Code", "Animation", "Responsive"],
+        features: ["Pixel-perfect implementation", "Figma to code", "Responsive layout"],
+        github: "https://github.com/iam-qwerty/moonex"
     },
 ];
 
