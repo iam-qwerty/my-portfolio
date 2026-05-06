@@ -11,6 +11,9 @@ import { PortableTextBlock } from '@portabletext/types';
 import ShareButton from '@/app/blog/components/share-button';
 import ScrollProgressBar from '@/components/animated/scroll-progress-bar';
 
+export const revalidate = 60;
+export const dynamicParams = true;
+
 interface Params {
     params: Promise<{
         slug: string;
@@ -39,7 +42,8 @@ function getPlainText(blocks: PortableTextBlock[] = []) {
 // Generate dynamic metadata
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
     const { slug } = await params;
-    const { data: post } = await sanityFetch({ query: postQuery, params: { slug } });
+    const { data } = await sanityFetch({ query: postQuery, params: { slug } });
+    const post = data as Post | null;
 
     if (!post) {
         // Return metadata for not found page
@@ -92,7 +96,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function BlogPost({ params }: Params) {
     const { slug } = await params; // Access slug directly from params
     // Fetch the post data using our Sanity client
-    const { data: post } = await sanityFetch({ query: postQuery, params: { slug } });
+    const { data } = await sanityFetch({ query: postQuery, params: { slug } });
+    const post = data as Post | null;
 
     // Use Next.js's new notFound() helper to gracefully handle missing data
     if (!post) return notFound();
@@ -137,7 +142,9 @@ export default async function BlogPost({ params }: Params) {
 // Next.js 15’s new static param generation for dynamic routes.
 export async function generateStaticParams() {
     // Fetch only slugs for efficiency
-    const posts: { slug: { current: string } }[] = await client.fetch(`*[_type == "post" && defined(slug.current)]{ "slug": slug }`);
+    const posts: { slug: { current: string } }[] = await client
+        .withConfig({ useCdn: false })
+        .fetch(`*[_type == "post" && defined(slug.current)]{ "slug": slug }`);
     return posts.map((post) => ({
         slug: post.slug.current,
     }));

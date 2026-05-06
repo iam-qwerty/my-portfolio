@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
-import { Navigation } from '@/components/navigation'
-import Footer from '@/components/footer'
 import Script from 'next/script'
 import { SanityLive } from "@/sanity-lib/live"
 
@@ -69,12 +67,8 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${montserrat.className} bg-[#0a0a0a] text-white min-h-screen overflow-x-hidden`}>
-        <Navigation />
-        <main className="container mx-auto px-4 pt-24">
-          {children}
-        </main>
-        <Footer />
+      <body className={montserrat.className}>
+        {children}
         <SanityLive />
       </body>
     </html>

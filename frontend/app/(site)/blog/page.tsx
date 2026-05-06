@@ -3,6 +3,9 @@ import { blogQuery } from "@/sanity-lib/queries";
 import { BlogList } from "@/components/sections/blogList";
 import Section from "@/components/section";
 import { Metadata } from 'next';
+import { Post } from "@/lib/types";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: 'Blog',
@@ -18,7 +21,8 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  const { data: posts } = await sanityFetch({ query: blogQuery });
+  const { data } = await sanityFetch({ query: blogQuery });
+  const posts = data as Post[];
 
   return (
     <Section id="blog" className="min-h-screen">

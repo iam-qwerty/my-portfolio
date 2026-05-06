@@ -10,9 +10,13 @@ const ScrollProgressBar = dynamic(() => import('@/components/animated/scroll-pro
 import { sanityFetch } from '@/sanity-lib/live'
 import { latestPostsQuery } from '@/sanity-lib/queries'
 import { BlogSection } from '@/components/sections/blogSection'
+import { Post } from '@/lib/types'
+
+export const revalidate = 60
 
 export default async function Portfolio() {
-  const { data: latestPosts } = await sanityFetch({ query: latestPostsQuery })
+  const { data } = await sanityFetch({ query: latestPostsQuery })
+  const latestPosts = data as Post[]
 
   return (
     <>
