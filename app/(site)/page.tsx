@@ -11,6 +11,7 @@ import { sanityFetch } from '@/sanity-lib/live'
 import { latestPostsQuery } from '@/sanity-lib/queries'
 import { BlogSection } from '@/components/sections/blogSection'
 import { Post } from '@/lib/types'
+import { JsonLd, homepageJsonLd } from '@/components/seo/json-ld'
 
 export const revalidate = 60
 
@@ -20,6 +21,7 @@ export default async function Portfolio() {
 
   return (
     <>
+      <JsonLd json={homepageJsonLd()} />
       <ScrollProgressBar />
       <HomeSection />
       <ProjectsSection />

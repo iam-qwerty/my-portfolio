@@ -10,6 +10,7 @@ import { Post } from '@/lib/types'; // Assuming you have a Post type defined
 import { PortableTextBlock } from '@portabletext/types';
 import ShareButton from '@/app/blog/components/share-button';
 import ScrollProgressBar from '@/components/animated/scroll-progress-bar';
+import { JsonLd, blogPostJsonLd } from '@/components/seo/json-ld';
 
 export const revalidate = 60;
 export const dynamicParams = true;
@@ -102,9 +103,22 @@ export default async function BlogPost({ params }: Params) {
     // Use Next.js's new notFound() helper to gracefully handle missing data
     if (!post) return notFound();
 
+    // Compute description for JSON-LD (same logic as generateMetadata)
+    const metaDescription = post.body
+        ? getPlainText(post.body).substring(0, 160)
+        : 'Read this blog post';
+
     const shareURL = `https://emmanueloye.com/blog/${post.slug.current}`;
     return (
         <>
+            <JsonLd json={blogPostJsonLd({
+                title: post.title,
+                slug: post.slug.current,
+                description: metaDescription,
+                publishedAt: post._createdAt,
+                authorName: post.authorName || 'Emmanuel Oyegbile',
+                imageUrl: post.mainImage ? urlFor(post.mainImage).width(1200).height(630).fit('crop').url() : undefined,
+            })} />
             <ScrollProgressBar />
             <article className="max-w-3xl mx-auto py-16 px-1">
                 <div className="mb-8">
