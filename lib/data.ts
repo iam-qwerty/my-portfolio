@@ -111,13 +111,13 @@ export const projects: Project[] = [
         features: ["Blog", "Sanity CMS", "Responsive Design"]
     },
     {
-        title: "Cyberdicts",
-        description: "Gamified Cybersecurity Certification Prep",
-        src: "/images/cyberdicts.jpeg",
-        link: "https://cyberdicts.vercel.app/",
-        type: "Fullstack" as ProjectType,
-        tags: ["Next.js", "TypeScript", "Shadcn UI"],
-        features: ["Interactive quizzes", "Progress tracking", "Certification simulation"]
+        title: "Professional Portfolio Website",
+        description: "Custom-designed portfolio site showcasing client experiences and impact.",
+        src: "/images/opeyemi.png",
+        link: "https://opeyemi-five.vercel.app/",
+        type: "Landing Page" as ProjectType,
+        tags: ["Next.js", "Design", "Framer Motion"],
+        features: ["Custom animations", "Project showcases", "Responsive design"]
     },
     {
         title: "Which AI Tool",
@@ -138,15 +138,6 @@ export const projects: Project[] = [
     //     features: ["Service showcases", "Client testimonials", "Contact form integration"]
     // },
     {
-        title: "Professional Portfolio Website",
-        description: "Custom-designed portfolio site showcasing client experiences and impact.",
-        src: "/images/opeyemi.png",
-        link: "https://opeyemi-five.vercel.app/",
-        type: "Landing Page" as ProjectType,
-        tags: ["Next.js", "Design", "Framer Motion"],
-        features: ["Custom animations", "Project showcases", "Responsive design"]
-    },
-    {
         title: "The Emergence Porch",
         description: "The official website of a non-profit organization helping young individuals find purpose.",
         src: "/images/TEP.png",
@@ -154,6 +145,15 @@ export const projects: Project[] = [
         type: "Landing Page" as ProjectType,
         tags: ["Next.js", "SEO", "Accessibility"],
         features: ["Custom design", "Donation integration", "SEO & metadata optimization"]
+    },
+    {
+        title: "Cyberdicts",
+        description: "Gamified Cybersecurity Certification Prep",
+        src: "/images/cyberdicts.jpeg",
+        link: "https://cyberdicts.vercel.app/",
+        type: "Fullstack" as ProjectType,
+        tags: ["Next.js", "TypeScript", "Shadcn UI"],
+        features: ["Interactive quizzes", "Progress tracking", "Certification simulation"]
     },
     {
         title: "Cataleex",
