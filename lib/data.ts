@@ -111,6 +111,15 @@ export const projects: Project[] = [
         features: ["Blog", "Sanity CMS", "Responsive Design"]
     },
     {
+        title: "FendAm Academy",
+        description: "A cohort-based online learning platform offering 7-month structured programs across AI, full-stack development, cybersecurity, and network hacking with instructor-led grading.",
+        src: "/images/fenndam-academy.png",
+        link: "https://academy.fendamtech.com",
+        type: "Fullstack" as ProjectType,
+        tags: ["Next.js", "Tailwind CSS", "Shadcn UI", "TypeScript"],
+        features: ["4 specialized learning tracks", "Cohort-based enrollment with KYC verification", "Instructor-led graded assignments", "Student progress dashboard", "Project-based curriculum"]
+    },
+    {
         title: "Professional Portfolio Website",
         description: "Custom-designed portfolio site showcasing client experiences and impact.",
         src: "/images/opeyemi.png",
@@ -119,15 +128,15 @@ export const projects: Project[] = [
         tags: ["Next.js", "Design", "Framer Motion"],
         features: ["Custom animations", "Project showcases", "Responsive design"]
     },
-    {
-        title: "Which AI Tool",
-        description: "AI tool directory where users can find the best AI tools for specific tasks.",
-        src: "/images/which-ai.jpg",
-        link: "https://askwhichai.com/",
-        type: "Web App" as ProjectType,
-        tags: ["Next.js", "OpenAI", "Semantic Search"],
-        features: ["Global search", "Category filtering", "Rich tool metadata"]
-    },
+    // {
+    //     title: "Which AI Tool",
+    //     description: "AI tool directory where users can find the best AI tools for specific tasks.",
+    //     src: "/images/which-ai.jpg",
+    //     link: "https://askwhichai.com/",
+    //     type: "Web App" as ProjectType,
+    //     tags: ["Next.js", "OpenAI", "Semantic Search"],
+    //     features: ["Global search", "Category filtering", "Rich tool metadata"]
+    // },
     // {
     //     title: "RDAS SOFTECH",
     //     description: "Landing Website for a software solution company developed with Next.js",
