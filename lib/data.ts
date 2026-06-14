@@ -211,16 +211,16 @@ export const projects: Project[] = [
     //     tags: ["Video API", "Next.js", "Utility"],
     //     features: ["Multi-platform support", "High-speed downloads", "Simple & intuitive UI"]
     // },
-    {
-        title: "Moonex",
-        description: "Pixel-perfect Figma-to-code Web3 landing page implementation.",
-        src: "/images/moonex.png",
-        link: "https://moonex-gules.vercel.app/",
-        type: "Landing Page" as ProjectType,
-        tags: ["Figma to Code", "Animation", "Responsive"],
-        features: ["Pixel-perfect implementation", "Figma to code", "Responsive layout"],
-        github: "https://github.com/iam-qwerty/moonex"
-    },
+    // {
+    //     title: "Moonex",
+    //     description: "Pixel-perfect Figma-to-code Web3 landing page implementation.",
+    //     src: "/images/moonex.png",
+    //     link: "https://moonex-gules.vercel.app/",
+    //     type: "Landing Page" as ProjectType,
+    //     tags: ["Figma to Code", "Animation", "Responsive"],
+    //     features: ["Pixel-perfect implementation", "Figma to code", "Responsive layout"],
+    //     github: "https://github.com/iam-qwerty/moonex"
+    // },
 ];
 
 export const experience = [
